@@ -1,26 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Navigation />
+  <div class="container">
+    <Breadcrumbs />
+    <router-view />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navigation from './components/Navigation';
+import Breadcrumbs from './components/Breadcrumbs';
+import router from './router';
+import { store } from './main';
+
+router.beforeEach((to, from, next) => {
+  console.log('triggered');
+  if (to.name !== 'LoginView' && !store.state.authToken) next({ name: 'LoginView' })
+  else next()
+})
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    Navigation,
+    Breadcrumbs,
+  },
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

@@ -1,0 +1,141 @@
+body {
+   margin: 0;
+   background: #080a14;
+   font-family: "Helvetica Neue", Helvetica, "PingFang SC";
+}
+
+#app {
+   color: #fff;
+}
+
+.breadcrumb-wrapper {
+   padding: 10px 0;
+}
+
+.align-center {
+   align-items: center;
+}
+
+table .redirect-link {
+   color: #52555a;
+   font-size: 1rem;
+   margin-left: 14px;
+}
+
+.el-menu-item {
+   padding: 0;
+}
+
+.el-input__inner {
+   background: transparent;
+}
+
+.el-table, .el-table__expanded-cell {
+   background: transparent;
+}
+
+.el-table td, .el-table th.is-leaf {
+   border: none;
+}
+
+.el-table th {
+   background-color: #080a15;
+}
+
+.el-table tbody tr {
+   background-color: #181a26;
+}
+
+.el-table__body td:first-child {
+   border-top-left-radius: 14px;
+   border-bottom-left-radius: 14px;
+   padding-left: 24px;
+}
+
+.el-table__body td:last-child {
+   border-top-right-radius: 14px;
+   border-bottom-right-radius: 14px;
+}
+
+.el-table::before, .el-table__fixed-right::before, .el-table__fixed::before {
+   display: none;
+}
+
+.el-table__body {
+   border-spacing: 0 14px;
+   background: #080a15;
+}
+
+.el-table th:hover, .el-table tr:hover {
+   background-color: #080a15;
+}
+
+.margin-top-10 {
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+.align-right {
+   text-align: right;
+}
+
+.el-menu.el-menu--horizontal {
+   border: none;
+   padding: 0 120px;
+}
+
+.el-skeleton__item {
+   background: #262a37;
+}
+
+.el-button.el-button--default {
+   background: transparent;
+   border: 2px solid #50a080;
+   color: #fff;
+   text-transform: uppercase;
+   font-weight: 600;
+   padding: 12px 30px;
+   border-radius: 5px;
+}
+
+.el-avatar i.el-icon-user-solid {
+   margin: 0;
+}
+
+.el-submenu__title {
+   text-align: right;
+}
+
+.el-submenu__title .el-avatar {
+   margin: 0 10px;
+}
+
+.el-submenu__title i {
+   right: 0;
+}
+
+.el-menu--horizontal {
+   font-weight: 600;
+}
+
+.container {
+   padding: 10px 120px;
+   max-width: 1400px;
+   margin: auto;
+}
+
+@media (max-width: 576px) {
+   .container {
+      padding: 10px 20px;
+   }
+
+   .el-menu.el-menu--horizontal {
+      padding: 0 10px;
+   }
+
+   .right-nav-tab {
+      max-width: 100%;
+      flex: 0 0 100%;
+      margin: 0;
+  }
+}
